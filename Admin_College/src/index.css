@@ -1,0 +1,308 @@
+
+/* ==================================
+   GLOBAL STYLES
+================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    background: #f4f6f9;
+    color: #212529;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+/* ==================================
+   MAIN CONTENT
+   Fixed sidebar width: 260px
+================================== */
+
+.main-content {
+    width: calc(100% - 260px);
+    min-width: 0;
+    min-height: 100vh;
+    margin-left: 260px;
+    padding: 24px;
+    background: #f4f6f9;
+}
+
+/* ==================================
+   SHARED CARDS
+================================== */
+
+.content-card,
+.exam-table-card {
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 24px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.card-title-bar,
+.exam-table-header {
+    padding: 16px 20px;
+    background: #fff;
+    border-bottom: 1px solid #e9ecef;
+    color: #212529;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.content-card .card-body {
+    padding: 24px;
+}
+
+/* ==================================
+   EXAM FORM
+================================== */
+
+.exam-form-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.exam-form-container .form-label {
+    margin-bottom: 7px;
+    color: #343a40;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.exam-form-container .form-control,
+.exam-form-container .form-select {
+    min-height: 42px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 0.92rem;
+    box-shadow: none;
+}
+
+.exam-form-container .form-control:focus,
+.exam-form-container .form-select:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.12);
+}
+
+.exam-form-container .form-control.is-invalid,
+.exam-form-container .form-select.is-invalid {
+    border-color: #dc3545;
+}
+
+.exam-form-container .invalid-feedback {
+    font-size: 0.82rem;
+}
+
+.exam-form-container .btn {
+    min-height: 38px;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.exam-form-container .alert {
+    border-radius: 7px;
+}
+
+/* ==================================
+   EXAM TABLE
+================================== */
+
+.exam-table-card .card-body {
+    min-width: 0;
+}
+
+.exam-table-header h5 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.exam-search {
+    width: 100%;
+    max-width: 280px;
+}
+
+.exam-search .input-group-text {
+    color: #6c757d;
+    background: #f8f9fa;
+    border-color: #ced4da;
+}
+
+.exam-search .form-control {
+    min-width: 0;
+    min-height: 36px;
+    border-color: #ced4da;
+    font-size: 0.88rem;
+    box-shadow: none;
+}
+
+.exam-search .form-control:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.12);
+}
+
+.exam-table {
+    min-width: 1050px;
+}
+
+.exam-table th,
+.exam-table td {
+    padding: 14px 16px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.exam-table th {
+    color: #495057;
+    background: #f8f9fa;
+    font-size: 0.84rem;
+    font-weight: 600;
+}
+
+.exam-table td {
+    color: #343a40;
+    font-size: 0.9rem;
+}
+
+.exam-table tbody tr:hover > * {
+    background: #f8faff;
+}
+
+.exam-table .badge {
+    padding: 6px 9px;
+    border-radius: 5px;
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+.exam-table .btn {
+    min-width: 32px;
+    border-radius: 6px;
+}
+
+/* ==================================
+   TABLET
+================================== */
+
+@media (max-width: 991.98px) {
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .exam-form-container {
+        max-width: 100%;
+    }
+
+    .exam-search {
+        max-width: 100%;
+    }
+}
+
+/* ==================================
+   MOBILE
+================================== */
+
+@media (max-width: 575.98px) {
+    .main-content {
+        padding: 12px;
+    }
+
+    .content-card,
+    .exam-table-card {
+        margin-bottom: 16px;
+        border-radius: 8px;
+    }
+
+    .content-card .card-body {
+        padding: 16px;
+    }
+
+    .card-title-bar,
+    .exam-table-header {
+        padding: 14px 16px;
+        font-size: 1rem;
+    }
+
+    .exam-form-container .form-label {
+        font-size: 0.86rem;
+    }
+
+    .exam-form-container .btn {
+        padding: 8px 12px;
+    }
+
+    .exam-table th,
+    .exam-table td {
+        padding: 12px;
+    }
+}
+
+/* ==================================
+   COLLEGE AND STUDENT MODULES
+   (added on top of the exam styles)
+================================== */
+
+/* Wider tables than the exam table (these come after .exam-table) */
+.data-table-md {
+    min-width: 1100px;
+}
+
+.data-table-lg {
+    min-width: 1250px;
+}
+
+/* Allow long text such as addresses to wrap inside a table cell */
+.exam-table .cell-wrap {
+    min-width: 200px;
+    white-space: normal;
+}
+
+/* Table is dimmed while new results are loading */
+.exam-table.table-loading tbody {
+    opacity: 0.55;
+}
+
+/* Status dropdown next to the search box */
+.filter-select {
+    width: 100%;
+    min-width: 150px;
+    max-width: 200px;
+}
+
+/* Section headings inside the college and student forms */
+.form-section-title {
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e9ecef;
+    color: #0d6efd;
+    font-size: 0.92rem;
+    font-weight: 700;
+}
+
+
+
+@media (max-width: 991.98px) {
+    .filter-select {
+        max-width: 100%;
+    }
+}
